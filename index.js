@@ -545,7 +545,7 @@ if(argv['_'] != 0){
 }
 
 web3.eth.getCoinbase(async (error, result) => {
-    console.log('Coinbase: ' + result);
+    console.log(`Coinbase: ${result} error: ${error}`);
     coinbase = result;
     balance = await web3.eth.getBalance(coinbase);
     console.log('Balance: ' + balance.toString(10));
