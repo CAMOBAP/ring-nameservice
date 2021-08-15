@@ -1,4 +1,5 @@
-pragma solidity >=0.4.22 <0.7.0;
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.4.22 <0.9.0;
 /*
  * Copyright (c) 2014 Gav Wood <g@ethdev.com>
  * Copyright (c) 2016 Savoir-faire Linux Inc.
