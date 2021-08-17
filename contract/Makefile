@@ -12,4 +12,4 @@ registrar.out.json: registrar.sol build.json
 	$(SOLC) $(SOLC_OPTS) --standard-json < build.json > registrar.out.json
 
 clean:
-	rm registrar.out.json
+	rm -rf registrar.out.json
