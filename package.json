@@ -13,5 +13,8 @@
     "express": ">=4.1.0",
     "minimist": ">=1.0.0",
     "web3": ">=0.15"
+  },
+  "devDependencies": {
+    "yarn": "^1.22.11"
   }
 }

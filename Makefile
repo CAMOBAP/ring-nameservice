@@ -34,14 +34,13 @@ geth: $(GETH_DATADIR)/geth/nodekey
 		--http --http.addr 127.0.0.1 --http.api eth,net,web3,personal,admin  --netrestrict="127.0.0.1/8" \
 		--bootnodes "enode://11ba6d3bfdc29a8afb24dcfcf9a08c8008005ead62756eadb363523c2ca8b819efbb264053db3d73949f1375bb3f03090f44cacfb88bade38bb6fc2cb3d890a5@173.231.120.228:30301" console
 
-package-lock.json node_modules: package.json
-	npm install yarn
+node_modules: package.json
 	yarn install
 
-run: package-lock.json contractAddress.txt
+run: node_modules contractAddress.txt
 	node index.js
 
-contractAddress.txt: $(GETH_DATADIR)/geth/nodekey contract accountAddress.txt
+contractAddress.txt: contract accountAddress.txt
 	# node deploy_contract.js > contractAddress.txt contract now embed in genesis
 	echo "0000000000000000000000000000000000000001" > contractAddress.txt
 
